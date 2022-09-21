@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+
+.container{
+    @apply flex flex-col mx-auto place-content-center mt-20 xl:mt-32 bg-white md:w-2/4 py-8 rounded-lg;
+}
+
+ion-icon {
+    color: red;
+    /* position: absolute; */
+    /* margin: 1.5rem 0rem 0 0.2rem; */
+    font-size: 1.5em;
+  }
+
+.carousel ion-icon {
+    color: red;
+    /* position: absolute; */
+    /* margin: 1.5rem 0rem 0 0.2rem; */
+    font-size: 2em;
+  }
+
+.btn3 ion-icon {
+color: black;
+position: relative;
+top: 0.35rem;
+left: 0.5rem;
+font-size: 1.3em;
+}
+
+.btn3 :hover ion-icon{
+color: white
+}
+
+.btn4 ion-icon {
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 1rem 1rem;
+}
+
+.btn4 :hover ion-icon{
+    font-size: 2rem;
+    color: red;
+}
+
+.heading{
+    @apply text-center;
+}
+
+.form{
+    @apply flex flex-col justify-center items-center;
+}
+
+.btn{
+    @apply flex flex-col;
+}
+
+.btn button{
+    @apply  bg-red-500  active:bg-red-600 hover:bg-red-400 active:scale-95 text-white
+    mt-3 py-2 px-10 rounded-md sm:mb-3;
+}
+
+.btn2{
+    @apply flex flex-col mt-2 md:mt-0;
+}
+.btn2 button{
+    @apply bg-transparent mt-3  font-semibold text-sm sm:mt-6 active:bg-gray-300 w-52;
+}
+
+.btn3{
+    @apply flex flex-col;
+}
+
+.btn3 button{
+    @apply  bg-white active:font-bold border-black border-[1px]  hover:bg-black active:scale-95 text-black hover:text-white
+    mt-3 py-2 px-10 rounded-md sm:mb-3;
+}
+
+@tailwind utilities;

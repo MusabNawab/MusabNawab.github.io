@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food@doorstep</title>
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.fb1c7aed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA+5JREFUWEedl01oVUcUx3/zYio0Ymgb0sZaCy5sMQtxkRRUcGUKLgTrSl7dhCoSyMJFXPgVaSCQuJHWCDZINmlQUEFEUHDhShe6iLa40IUfSZOQRWq6UGniOzJ37nsz996Ze1+czXv33jPn/M/X/8woESkBx4AeoI3CJSDKSMU/+q8kH8NajOAscB4YVCJyQmDA0ZWjLDYeCbsm9f8UIheCD50IKHVSA5jRnqdlsnviN5kPeb5LDNN1LxGcWSVS0VCit5GqlDMJ9YXGjUDd6YjsOQAsCifAK9HmrYV8BUoqIm4xFdZgVWBuDl68gMVF0EFs+QLWrYOWFli9GioVePkSWlvh06ZAiYiOgK4Gz/KF++lT+O13uH4dpqet0lhDtEVns/ETeP/eAFlYML+ZZTYFASSyubwEp/rhzBlYXoZSyXhYtLq7kYsXTV0F6rAGIDdTP5fhzwn4dgOMnDdh7ey05jdtgo4OePzYhP3tW9i7F0ZHYe1aUxmaOzwgwimI1cvEBKpchlWrYPIRtG+GCxfg8OEaADl6FDU0ZJ4dT/LLz3y1XVDrwRRM7dnDh/BjF3LrtnGiuxvGxmwErlyBfT/Vy4WJxOVHQBeQrmpdp6dPQ3+/2dzeDk+eWEVTr2D9N4779fZu3AU1cUOPVvHkJGzdGkWVP0ZRB39B/ltEffa5LcK2Npj5J+B9MZD8COi2++5749n4OJTLyJ07qF27LMjdu+HyZfvc2BhoO3/LGAAhoPr9ju1w7x6MjEBPDwwOwvHjsTYdrRSN/DoAJ09kCjLUsckI+IC8eQNXr8KaNaa19uyBGzdMS4lCGkooVTJDRO+/eRO6uhx7obaodYHLhO4kCoTlqy9hft4Y04S08C80615P96BbT+FaUFLRRF7l0FSgXDza4efPURs3WiHdDX/9bTgmYSNrMAQhkYLCmr10CfbvtwCqVFtEycHvURvG54EgWzqwjhyBs2etOs2Ihw6tyLzrpOE+7zT0n/vYtg3u30/yxJYtSQCJtDleBcIbRUAfCHzDyu4R+H8Jmpvh3TtjsKkJXr82MyJnFc2DLA+EUvHgAXT+YPt+5064e3dF4fcJq0qcguCxsbrr3Dno7bU6+vpgeDjuvhSFJyylYpAaet4u8A7GAwcMHVdXNAH3eSOQHil5p9TC80DNgj50PHtmDU5NwfqvzRAq7F8PzniPBRDD9urS365dM2NZr4YGQ8spovqYgqg/AgXa8+ZZtr6stBMBcyvxt2T2fSbPOWwXPJHGRDSD0OY7un5MagvTkEybvpqJHt4Dvo0GQDGMmkRa1Lc1KRxdTuu+nvsLNH0ay7B95FvCGZFZlIqu5x8AQE+9eOrzpJcAAAAASUVORK5CYII=">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAdtJREFUOE9lkz1PVFEQhp/ZhVsqYkMCDY0fhSbUa8IvoNFCCkIDv4BkTZQEbUgIiVKtNnTaaPQvKBXVhpIWkrUSE5RG92rOa86c+3E2ntzknjOf77wzY1LYkdgGCjOjPUJAK4m3KIk/i19paNcUNMYoap0bmNzIbeOzjlKJLUqTvjSFILeo0kmZw/cL+PETzczAjVkox1AUWLfbBpdCdIHaM/7fvIaXr9DZGSZ5Mos28/Nwfo66XS/Nc4Yg1RBd8OI5fP6C9vawBz24dRuePoOvI1hZgfv3kKwFrSAlpgR//sLsTfTuLXZ1hdbXsY0NODysIEfTjJD4igESUYJvF2huDjs5cScNBthgAJubMDUF1kltafjSZAlRo/4TWFtzJxsOUaeTcg6HsLSUtTldLQKIROWd4NdvdP0aVhRweQnT01X/K/8MhSlVMDE0Oj7Gej1YXoajo0ml27ZcWFBII5F6lQIdHKCtLazfh/1977DDrQBUpv+3sYHxeBU+vIePn+DRw9qtCeFJ6qmsS6iLdHCLiz4wjEawsIBXaW0Dm7GPoJ3ELIdDPT1NLbt7Z3JC3dA3oRmdSOIYUURMSZFvZOafc9Dey4hgB7FtcSPrk+1xs1ztJjvTZiqF7f4D7h/tt75SFYcAAAAASUVORK5CYII=">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+
+  <script type="module" crossorigin src="assets/index.ab9e5702.js"></script>
+  <link rel="stylesheet" href="assets/index.f456bc2f.css">
+</head>
+
+<body>
+    <nav
+        class="bg-transparent flex flex-col justify-center items-center md:flex-row md:justify-between md:top-0 md:sticky z-30 md:h-20">
+        <a href="index.html"><img src="assets/logo.fbb97984.png" alt="logo"
+                class="mt-14 hidden w-60 active:scale-90 hover:scale-105 lg:pl-3 md:pb-10 lg:pb-14 md:block"></a>
+        <a href="index.html"><img src="assets/Big_logo.fdb0c172.png" alt="logo" class="mt-5 w-32 active:scale-105 md:hidden"></a>
+        <input type="search" placeholder="Search for dish"
+            class="mt-3 w-80 ml-10 h-9 rounded-lg border-2 border-gray-400 px-3 focus:outline-black">
+        <button id="toggle-btn">
+            <ion-icon name="menu-outline" class="mt-2 sm:hidden animate-pulse active:bg-gray-400"></ion-icon>
+        </button>
+        <ul id="lists" data-value="false" class="text-red-400 flex justify-end space-x-6 py-7 px-8">
+            <a href="login.html">
+                <li class="cursor-pointer hover:font-bold text-center sm:pl-4">Login</li>
+            </a>
+            <li class="cursor-pointer hover:font-bold text-center sm:pl-4">Categories</li>
+            <li class="cursor-pointer hover:font-bold text-center sm:pl-[0.65rem]">Contact</li>
+            <a href="about.html">
+                <li class="cursor-pointer hover:font-bold text-center sm:pl-4">About</li>
+            </a>
+        </ul>
+    </nav>
+    <main>
+        <div class="carousel h-[16rem] sm:h-[28rem] md:h-[43rem] lg:h-[25.5rem] xl:h-[30rem] 2xl:h-[38rem] shadow-2xl">
+            <button
+                class="carousel-btn carousel__btn--left is-hidden hover:text-xl hover:bg-gray-200 hover:bg-opacity-40 rounded-2xl top-32 sm:top-56 md:top-80 lg:top-48 xl:top-56 2xl:top-72">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel-track">
+                    <li class="carousel_slide current-slide"><a href="#"><img src="img/img1.jpg" alt="" id="img1"></a>
+                    </li>
+                    <li class="carousel_slide"><a href="#"><img src="img/img2.jpg" alt="" id="img2"></a></li>
+                    <li class="carousel_slide"><a href="#"><img src="img/img3.jpg" alt="" id="img3"></a></li>
+                </ul>
+            </div>
+            <button
+                class="carousel-btn carousel__btn--right hover:text-xl rounded-2xl top-32 sm:top-56 md:top-80 lg:top-48 xl:top-56 2xl:top-72 hover:bg-gray-200 hover:bg-opacity-40">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+            <div class="carousel_nav -mt-[5.5rem]">
+                <button class="carousel_indicator current-slide"></button>
+                <button class="carousel_indicator"></button>
+                <button class="carousel_indicator"></button>
+            </div>
+        </div>
+
+        <div class="ml-10 lg:ml-16 absolute top-[30rem] sm:top-[35rem] lg:top-[18rem] 2xl:top-[22rem]">
+            <div class="sm:px-12 lg:py-9 2xl:py-10 2xl:px-72">
+                <h1 id="heading" class="text-white font-bold text-md md:text-lg lg:text-lg xl:text-3xl">Full Meals</h1>
+                <h2 id="price"
+                    class="animate-pulse text-red-500 font-extrabold text-sm md:text-lg lg:text-lg xl:text-2xl">Flat 20%
+                    off*</h2>
+                <p class="text-white font-bold text-sm lg:text-base lg:my-1 xl:my-3">*Grab Now!</p>
+                <div class="btn-3 my-2">
+                    <a href="#"><button
+                            class="bg-white text-black rounded-md text-sm p-1 mr-2 xl:p-2 xl:mr-2 border-[1px] hover:bg-transparent hover:text-white hover:border-white hover:text-lg active:bg-white active:text-black">Buy
+                            Now</button></a>
+                    <a href="#"><button class="bg-transparent text-white border-white border-[1px] rounded-md text-sm p-1 xl:p-2 hover:bg-white hover:text-black hover:text-lg
+                    active:bg-transparent active:text-white">Explore</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:mt-4">
+            <h1 class="text-center text-red-500 font-bold text-2xl mt-2">Order By Cuisine
+            </h1>
+            <div class="mt-4 flex flex-col justify-center items-center md:flex-row">
+                <div class="flex flex-col justify-center items-center">
+                    <a href=""><img src="assets/samosa.fcd308c2.png" alt="" class="md:pr-10 hover:scale-105"></a>
+                    <div class="text-lg font-semibold mt-3 md:mr-10">Indian</div>
+                </div>
+                <div class="mt-3 flex flex-col justify-center items-center">
+                    <a href=""><img src="assets/chinese.f194120d.png" alt="" class="md:pr-10 hover:scale-105"></a>
+                    <div class="text-lg font-semibold mt-3 md:mr-10">Chinese</div>
+                </div>
+                <div class="mt-3 flex flex-col justify-center items-center">
+                    <a href=""><img src="assets/arabian.409660c7.png" alt="" class="md:pr-10 hover:scale-105"></a>
+                    <div class="text-lg font-semibold mt-3 md:mr-10">Arabian</div>
+                </div>
+                <div class="mt-3 flex flex-col justify-center items-center">
+                    <a href=""><img src="assets/pasta.25d45aaf.png" alt="" class="md:pr-10 hover:scale-105"></a>
+                    <div class="text-lg font-semibold mt-3 md:mr-10">Italian</div>
+                </div>
+                <div class="mt-3 flex flex-col justify-center items-center">
+                    <a href=""><img src="assets/thai.1feeeab5.png" alt="" class="md:pr-10 hover:scale-105"></a>
+                    <div class="text-lg font-semibold mt-3 md:mr-10">Thai</div>
+                </div>
+                <div class="mt-3 flex flex-col justify-center items-center">
+                    <a href=""><img src="assets/mexican.5098b209.png" alt="" class="hover:scale-105"></a>
+                    <div class="text-lg font-semibold mt-3">Mexican</div>
+                </div>
+            </div>
+            <div class="btn3 justify-center items-center md:mt-5">
+                <a href="#"><button>Browse More Mouth Watering Cuisine<ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full bg-gray-200 md:bg-gray-100 bottom-0 mt-4 shadow-inner">
+        <div class="flex justify-center items-center md:mr-4">
+            <a href="index.html"><img src="assets/logo.fbb97984.png" alt="logo"
+                    class="mt-5 block w-52 active:scale-90 hover:scale-105 lg:hidden"></a>
+            <a href="index.html"><img src="assets/Big_logo.fdb0c172.png" alt="logo"
+                    class="hidden mt-5 w-48 active:scale-90 hover:scale-105 lg:block"></a>
+        </div>
+        <ul class="mt-10 text-red-400 pb-3 grid grid-flow-row md:grid-cols-3 justify-center items-center">
+            <li class="cursor-pointer font-bold hover:text-black text-center">Contact Us
+                <div class="md:flex md:flex-col md:justify-center md:items-center">
+                    <input type="text"
+                        class="mt-5 focus:outline-black h-10 border-gray-300 border-[1px] rounded-md pl-2"
+                        placeholder="Your Email">
+                    <input type="text"
+                        class="mt-5 focus:outline-black h-20 border-gray-300 border-[1px] rounded-md pl-2 pb-10"
+                        placeholder="Your Message">
+                </div>
+            </li>
+            <li class="mt-3 cursor-pointer font-bold hover:text-black text-center ">Learn More
+                <div class="text-black text-sm font-light mt-3">
+                    <a href="#" class="hover:font-bold focus:underline focus:font-bold pt-3">
+                        <p>What we do</p>
+                    </a>
+                    <a href="#" class="hover:font-bold focus:underline focus:font-bold pt-3">
+                        <p>Who are we</p>
+                    </a>
+                    <a href="#" class="hover:font-bold focus:underline focus:font-bold pt-3">
+                        <p>Carrers</p>
+                    </a>
+                    <a href="#" class="hover:font-bold focus:underline focus:font-bold pt-3">
+                        <p>Want to do bussiness with us ?</p>
+                    </a>
+                </div>
+            </li>
+            <li class="mt-3 cursor-pointer font-bold hover:text-black text-center ">Follow us
+                <div class="btn4 mt-3">
+                    <a href="https://www.facebook.com/">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <p class="text-center text-black pb-3 font-medium">Copyright&copy food@doorstep-2022</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/assets/style.js"></script>
+    <script src="/assets/slider.js"></script>
+</body>
+
+</html>
